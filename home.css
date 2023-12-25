@@ -1,12 +1,26 @@
 body {
     display: block;
-    background-color: rgb(27, 1, 45);
+    background-color: rgb(9, 1, 15);
 }
 
 p {
     color: aliceblue;
 }
 
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: red;
+}
+
 .centered-text { 
     text-align: center;
+    color: aliceblue;
 }
