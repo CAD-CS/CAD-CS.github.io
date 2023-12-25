@@ -1,5 +1,12 @@
-#background-container {
+body {
     display: block;
-    background-color: rgb(75, 0, 130);
+    background-color: rgb(27, 1, 45);
+}
 
+p {
+    color: aliceblue;
+}
+
+.centered-text { 
+    text-align: center;
 }
