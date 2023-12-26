@@ -1,23 +1,33 @@
 body {
     display: block;
-    background-color: rgb(19, 3, 31);
+    background-color: rgb(13, 3, 21);
 }
 
 p {
     color: aliceblue;
 }
 
+a:link, a:visited {
+  color: rgb(255, 0, 85);
+} 
+
+a:hover, a:active {
+  color: chartreuse;
+}
+
 .homeLink:link, .homeLink:visited {
-  background-color: #f44336;
-  color: white;
+  background-color: rgb(255, 0, 85);
+  color: aliceblue;
   padding: 15px 25px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
+  border-radius: 20px;
 }
 
 .homeLink:hover, .homeLink:active {
-  background-color: red;
+  background-color: chartreuse;
+  color: blue;
 }
 
 .centered-text { 
