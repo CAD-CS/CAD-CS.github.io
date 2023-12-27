@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Alternative Designs</title>
+        <title>Monadic and Dyadic Functions</title>
         <link rel="stylesheet" href="../../home.css">
     </head>
     <body>
         <div style="color: aliceblue;">
-            <h1><i>Monads, Forks, And Hooks: Alternative Design Patterns In Non-Object Oriented Languages</i></h1>
+            <h1><i>Monadic And Dyadic Functions: Breaking Free From The Mold</i></h1>
             <h2>Introduction</h2>
-            <p>From the Composite pattern to the Singleton, a wide variety of design patterns have emerged over the decades which, for the purposes of this article, can be broadly broken down into three categories: structural, behavioral, and creational.</p>
-            <p>All of three of these categories relate directly or indirectly to object-oriented concepts/principles and the patterns themselves rely on OOP tools provided by the languages for their implementation. The composite pattern (structural) is the textbook example of polymorphism and both the observer pattern (behavioral) and the abstract factory pattern (creational) use objects and classes as their building blocks.</p>
-            <p>Design patterns help tremendously with streamlining and standardizing software development while freeing crucial time for the developer to work and think about and design the novelle components of their software. In other words, the developer doesn't need to reinvent the wheel everytime they embark on a new project. But design patterns aren't unique to OOP as these patterns arise when developers encounter similar classes of problems. Three non-OOP patterns will be investigated, one general pattern from the world of functional programming, and two from the array programming language family.</p>
-            <h2>Monads</h2>
-            <p>The Monad is the functional programming version of a design pattern. The basic idea of a monad is to allow the developer to chain operations. Each of these operations can be linked together with a "bind" operator. This feeds the output of one operation into the input of another. Along the way, the bind operator does extra things to modify the output of the first operation before giving it to the second.</p>
-            <p>In essence, using monads is just formalized function composition. Each monad would have their own unique bind operator which would suit their needs. Some examples of monads are the failure monad and list monad. The first is used when an operation in a sequence of operations can fail. In the case that does happen, the bind operator returns early without continuing. The second is used when an operation returns multiple results where each result needs to get fed into the next operation. For example, given a single number, <i>n</i>, an operation creates a list of <i>n</i> numbers which would need to get normalized. </p>
-            <h2>Hooks And Forks</h2>
-            <p>The hook and fork pattern are two patterns found in the array programming language family, more specifically APL and its descendants. In essence, these patterns are a special type of function composition supported by the compiler. This makes them language specific design patterns rather than more abstract patterns discussed in the introduction and the monads section.</p>
-            <p>Using array programming notation, this is what a hook looks like: <i>(u v) y</i>. In more traditional notation, <i>u(y, v(y))</i>. In english, you first apply function <i>v</i> to argument <i>y</i> which is then inputted into function <i>u</i> alongside the original value. For example, the expression, <i>n * (n + 1)</i> can be easily represented in a single expression using the built-in operators found in APL and J without needing to create a user defined function.</p>
-            <p>A fork is a similar idea: <i>(f g h) y</i> which is equivalent to <i>g(f(y), h(y))</i>. This pattern is perfect if you want to find the mean value of a list. </p>
+            <p>Due to their early math education or the prevalence of C language-like syntax, developers have grown accustomed to the standard <i>f(x)</i> notation to represent functions. This notation is both intuitive and simple and near universal; used in physics, mathematics, computer science, and everything else related to STEM. There might be some variations, such as foregoing the parenthesis like Haskell, <i>f x</i>, or placing the name inside the parenthesis like the LISP language family, <i>(f x)</i>. No matter what the idea is the same, the function called <i>f</i> takes input(s) <i>x</i> and the result will always be the same regardless where the name is located with respect to its arguments. </p>
+            <p>What if I told you that it doesn't have to be this way? This article will investigate the idea of monadic and dyadic functions in the APL language family and how they break free from the mold. </p>
+            <h2>Monadic Functions</h2>
+            <p>Monadic functions work almost the same as "regular" functions. In the J programming language, a monadic function would look like this: <i>f x</i>. The argument <b>always</b> goes on the right side. This might seem painfully obvious but this does come into play when talking about dyadic functions.</p>
+            <h2>Dyadic Functions</h2>
+            <p>Dyadic functions in J look like this: <i>y f x</i>. At most, a dyadic function can take only two arguments, one on its left and another on its right. This might seem overly restrictive but it is important to realize that languages like APL and J are constructed from the ground up to deal with arrays. Therefore if the developer wishes to feed more than two arguments into the function, they can just treat one of the parameters as an argument vector/list.</p> 
+            <p>One fascinating consequence of this monadic and dyadic split is that a single function, <i>f</i>, can have two different operations depending if it used monadically, <i>f x</i>, or dyadically, <i>y f x</i>.</p>
+            <p>Take for example, the primitive, <i>%</i>, in the J language. Used monadically, <i>% x</i>, the function yields the reciprocal of the number, <i>1/x</i>. When used dyadically, <i>y % x</i>, the function yields a simple division, <i>y/x</i>.</p>
+            <p>This dynamic allows the developer to define a single function that performs two similar operations, thus resulting a decrease in the number of user defined functions.</p>
             <h2>Conclusion</h2>
-            <p>We see design patterns popping up anywhere there is a healthy ecostystem of developers collaborating and publishing as can be seen from the wealth of patterns that have arisen for OOP and functional and array programming are no different. As these two paradigms gain more traction and popularity, more unique and domain specific patterns will arise. </p>
+            <p>Despite not being widely used, monadic and dyadic functions offer a glimpse into a unique paradigm that deserves to be researched and explored. They offer unique and elegant solutions which help challenge longstanding norms and unveil new perspectives. </p>
         </div>
     </body>
 </html>
