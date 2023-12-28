@@ -8,7 +8,16 @@
         <div style="color: aliceblue;">
             <h1 style="text-align: center;"><i>UBC Query</i></h1>
             <h3>Purpose</h3>
+            <p>For this project, me and my partner were assigned to create a querying application. You would feed the app a zipfile of either a list of courses or rooms at UBC and the app would unzip, then verify the file to see if it is properly formatted. The user would then be able to query the data for insights such as the average grade for a course or the number of rooms in a building.</p>
+            <p>I will only be talking about the portion of the project that I implemented, this would be most of the backend (<i>addDataset, removeDataset, listDataset</i>) and the REST endpoints. My partner implemented the query processor and frontend.</p>
             <h3>Design</h3>
+            <p>The most complex task ahead of me was the processing of the zipfile (unzipping and converting the contents to usable data). I used the JSZip module to unzip the file which was relatively straight forward but the processing of the data was significantly difficult. This was because the courses data was a list of JSON objects but the room data was in the form of an <i>HTML</i> file. The actual data for the rooms was contained somewhere within a table in the HTML file. This meant that I would need to implement two different parsers to sort through the data.</p>
+            <p>If the file was about UBC courses (JSON), then the parser would just loop through the entries and discarding the one that were invalid. The remaining entries were then converted into an instance of the <i>Data</i> class. </p>
+            <p>If the file was about UBC rooms (HTML), then the parser would recursively traverse the file until it reached the table where the data was located. The data would then be extracted and converted into an instance of the <i>Data</i> class. I am greatly simplifying the implementation but that was the gist of it.</p>
+            <p>Afterwards, the data was then stored in a data folder in the form of a JSON file to be queried by my partner. Furthermore, the data would be persistent between sessions. </p>
+            <p>Both the "remove" and "list" functionalities were relatively straight forward compared to the add functionality with regards to implementation.</p>
+            <p>Finally, I used express.js to implement the endpoints. This task was also straight forward as well.</p>
+            <p>Overall, this project was significantly more challenging and labour intensive than my <i>NotePad</i> project but it was well worth the effort as I learned a great deal and grew a lot as a developer!</p>
         </div>
     </body>
 </html>
