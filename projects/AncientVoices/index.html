@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ancient Voices</title>
+        <link rel="stylesheet" href="../../home.css">
+    </head>
+    <body>
+        <div style="color: aliceblue;">
+            <h1 style="text-align: center;"><i>Ancient Voices Project (Ongoing)</i></h1>
+            <h4>Technologies: C#, F#, .Net</h4>
+            <h3>Purpose</h3>
+            <p>Language reconstruction is paradoxically one of the most easiest things to do, while also one of the hardest things one can do.</p>
+            <p>It's easy since the fundementals are easy; you find a word in one language, find its nearest relative, and find common patterns.</p>
+            <p>The hard part is verification. It's actually impossible. Unless you can find a native speaker of the language or find the exact word in manuscript, you can never trully know. But if we had something like that then why even bother in the first place? Therefore the only measure of success is <i>confidence</i>.</p>
+            <p>The purpose of this project is to reconstruct and give life to ancient words with a reasonable amount of confidence using good old-fashioned AI</p>
+            <h3>Design</h3>
+            <p>The fundemental tool used in reconstruction is a <i>mapping</i>. More specifically a function, <i>f</i>, takes one word from language <i>A</i> and maps it to language <i>B</i> dependant on a list of tuples.</p>
+            <p>A tuple, <i>[(m,c)]</i>, contains a function <i>m</i> which maps one section of a word to another dependent on a context, <i>c</i>.</p>
+            <p>If <i>c</i> is satisfied (or partially satisfied) then the partial mapping is applied. A fully mapped word is one in which all contexts that are applicable are applied.</p>
+        </div>
+    </body>
+</html>
+
