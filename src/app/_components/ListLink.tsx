@@ -13,7 +13,7 @@ export default function ListLink({
 }: ListLinkProps) {
   return (
     <li>
-      <Link href={"/" + basePath + "/" + targetFolder}>{text}</Link>
+      <Link href={"/" + basePath + "/" + targetFolder} className="hover:text-purple-700 hover:italic">{text}</Link>
     </li>
   );
 }

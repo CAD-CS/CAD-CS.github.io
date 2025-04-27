@@ -5,16 +5,25 @@ import List from "../_components/List";
 import ListLink from "../_components/ListLink";
 
 export const metadata: Metadata = {
-  title: 'Articles',
+  title: "Articles",
 };
 
 export default function Articles() {
   return (
     <>
-      <PageHeader text="Articles" content="A collection of technical articles I have written" />
+      <PageHeader>Articles</PageHeader>
       <ContentBox>
         <List>
-          <ListLink basePath="articles" targetFolder="alternative-designs" text="Monads, Forks, And Hooks: Alternative Design Patterns In Non-Object Oriented Languages" />
+          <ListLink
+            basePath="articles"
+            targetFolder="alternative-designs"
+            text="Monads, Forks, And Hooks: Alternative Design Patterns In Non-Object Oriented Languages"
+          />
+          <ListLink
+            basePath="articles"
+            targetFolder="monadic-dyadic"
+            text="Monadic and Dyadic Functions: Breaking Free from the Mold"
+          />
         </List>
       </ContentBox>
     </>
