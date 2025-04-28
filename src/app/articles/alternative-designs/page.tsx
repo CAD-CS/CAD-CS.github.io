@@ -1,4 +1,5 @@
 import ContentBox from "@/app/_components/ContentBox";
+import ContentHeader from "@/app/_components/ContentHeader";
 import ContentParagraph from "@/app/_components/ContentParagraph";
 import PageHeader from "@/app/_components/PageHeader";
 import { Metadata } from "next";
@@ -15,58 +16,97 @@ export default function AlternativeDesigns() {
         Oriented Languages
       </PageHeader>
       <ContentBox>
+        <ContentHeader>Introduction</ContentHeader>
         <ContentParagraph>
-          From the Composite pattern to the Singleton pattern, a wide variety of
-          design patterns have emerged over the decades. For the purposes of
-          this article, they can be broadly categorized into three groups:
-          structural, behavioral, and creational. Each of these categories
-          relates directly or indirectly to object-oriented concepts/principles,
-          and the patterns themselves rely on the OOP tools provided by
-          programming languages for their implementation. The composite pattern
-          (structural) is a textbook example of polymorphism. Both the observer
-          pattern (behavioral) and the abstract factory pattern (creational) use
-          objects and classes as their building blocks. Design patterns
-          significantly streamline and standardize software development, freeing
-          up crucial time for developers to focus on designing and developing
-          novel components of their software. In other words, developers
-          don&#39;t need to reinvent the wheel every time they embark on a new
-          project. However, design patterns are not unique to OOP. These
-          patterns arise when developers encounter similar classes of problems.
-          In this article, we will investigate three non-OOP patterns: one from
-          the world of functional programming and two from the array programming
-          language family. The Monad is the functional programming version of a
-          design pattern. The basic idea of a monad is to allow developers to
-          chain operations. Each operation can be linked together with a bind
-          operator, which feeds the output of one operation into the input of
-          another. Along the way, the bind operator performs additional actions
-          to modify the output of the first operation before passing it to the
-          second. In essence, using monads formalizes function composition. Each
-          monad has its unique bind operator suited to its needs. Examples of
-          monads include the failure monad and the list monad. The failure monad
-          is used when an operation in a sequence can fail. If this occurs, the
-          bind operator returns early without continuing. The list monad is used
-          when an operation returns multiple results, and each result needs to
-          be fed into the next operation. For example, given a single number n,
-          an operation might create a list of n numbers, which would then need
-          to be normalized. The hook and fork patterns are two patterns found in
-          the array programming language family, specifically in APL and its
-          descendants. These patterns are a special type of function composition
-          supported by the compiler, making them language-specific design
-          patterns rather than the more abstract patterns discussed earlier.
-          Using array programming notation, a hook looks like: (u v) y. In more
-          traditional notation, it is u(y, v(y)). In English, you first apply
-          function v to argument y, and then input the result into function u
-          alongside the original value. For example, the expression n times (n +
-          1) can be easily represented in a single expression using the built-in
-          operators found in APL and J without needing to create a user-defined
-          function. A fork is a similar idea: (f g h) y, which is equivalent to
-          g(f(y), h(y)). This pattern is perfect for finding the mean value of a
-          list. Design patterns emerge wherever there is a healthy ecosystem of
-          developers collaborating and publishing their work. As can be seen
-          from the wealth of patterns that have arisen for OOP, functional, and
-          array programming, these paradigms are no different. As functional and
-          array programming gain more traction and popularity, more unique and
-          domain-specific patterns will arise.
+          Over the decades, a wide variety of design patterns have emerged,
+          ranging from the Composite pattern to the Singleton pattern. These
+          patterns can broadly be categorized into three groups: structural,
+          behavioral, and creational. Each category is directly or indirectly
+          related to object-oriented principles, and the patterns themselves
+          rely on the object-oriented programming (OOP) tools provided by
+          programming languages for their implementation.
+        </ContentParagraph>
+        <ContentParagraph>
+          For example, the Composite pattern (structural) is a textbook
+          demonstration of polymorphism, while both the Observer pattern
+          (behavioral) and the Abstract Factory pattern (creational) use objects
+          and classes as their building blocks. Design patterns significantly
+          streamline and standardize software development, freeing up crucial
+          time for developers to focus on designing and developing novel
+          software components. In other words, developers don’t need to reinvent
+          the wheel every time they start a new project.
+        </ContentParagraph>
+        <ContentParagraph>
+          However, design patterns are not exclusive to OOP. They tend to emerge
+          when developers encounter similar classes of problems. This article
+          explores three non-OOP design patterns: one from functional
+          programming and two from the array programming language family.
+        </ContentParagraph>
+        <ContentHeader>
+          The Monad Pattern in Functional Programming
+        </ContentHeader>
+        <ContentParagraph>
+          The Monad is a functional programming equivalent of a design pattern.
+          Its basic idea is to allow developers to chain operations. Each
+          operation is linked using a bind operator, which feeds the output of
+          one operation into the input of another. Along the way, the bind
+          operator performs additional actions to modify the output before
+          passing it to the next operation. In essence, monads formalize
+          function composition.
+        </ContentParagraph>
+        <ContentParagraph>
+          Each monad has a unique bind operator tailored to its specific needs.
+          Examples include the failure monad and the list monad. The failure
+          monad is used when an operation in a sequence may fail. If failure
+          occurs, the bind operator terminates early without continuing. The
+          list monad, on the other hand, is useful when an operation returns
+          multiple results, requiring each result to be fed into the next
+          operation. For instance, given a single number n, an operation might
+          generate a list of n numbers, which would then need to be normalized
+        </ContentParagraph>
+        <ContentHeader>
+          Hook and Fork Patterns in Array Programming
+        </ContentHeader>
+        <ContentParagraph>
+          The Hook and Fork patterns are found in the array programming language
+          family, particularly in APL and its descendants. These patterns
+          represent specialized forms of function composition, supported by the
+          compiler, making them language-specific design patterns rather than
+          the more abstract patterns discussed earlier.
+        </ContentParagraph>
+        <ContentParagraph>
+          Using array programming notation, a hook is written as (u v) y, which
+          translates to u(y, v(y)) in more traditional notation. In simpler
+          terms, function v is applied to argument y, and the result is then
+          used as an input for function u alongside the original value. For
+          example, the expression n × (n + 1) can be conveniently represented as
+          a single expression using built-in operators in APL and J, eliminating
+          the need for a user-defined function
+        </ContentParagraph>
+        <ContentParagraph>
+          A fork follows a similar structure: (f g h) y, which equates to
+          g(f(y), h(y)). This pattern is particularly useful for computing the
+          mean of a list, as it allows simultaneous application of functions to
+          different aspects of the input data. The Evolution of Design Patterns
+          Design patterns emerge wherever there is a thriving ecosystem of
+          developers collaborating and publishing their work. As seen with the
+          diverse patterns in OOP, functional programming, and array
+          programming, each paradigm fosters unique problem-solving approaches.
+          As functional and array programming continue to gain traction, more
+          domain-specific design patterns will undoubtedly arise, further
+          enriching the software development landscape. This version removes the
+          em-dashes while keeping the clarity and structure intact. Let me know
+          if you’d like any other refinements.
+        </ContentParagraph>
+        <ContentHeader>The Evolution of Design Patterns</ContentHeader>
+        <ContentParagraph>
+          Design patterns emerge wherever there is a thriving ecosystem of
+          developers collaborating and publishing their work. As seen with the
+          diverse patterns in OOP, functional programming, and array
+          programming, each paradigm fosters unique problem-solving approaches.
+          As functional and array programming continue to gain traction, more
+          domain-specific design patterns will undoubtedly arise, further
+          enriching the software development landscape.
         </ContentParagraph>
       </ContentBox>
     </article>

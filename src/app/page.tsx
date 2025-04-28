@@ -48,6 +48,12 @@ export default function Home() {
           I thrive in team environments, ensuring successful project outcomes
           and fostering positive workplace relationships.
         </ContentParagraph>
+        <ContentHeader>A little about this site</ContentHeader>
+        <ContentParagraph>
+          This site is a personal project that I built to showcase my skills and
+          projects. It is built using Next.js, TypeScript, and Tailwind CSS. The
+          source code is available on <a href="https://github.com/CAD-CS/CAD-CS.github.io" target="_blank" rel="noopener noreferrer" className="underline hover:text-purple-700 hover:italic">GitHub</a>.
+        </ContentParagraph>
       </ContentBox>
     </>
   );
