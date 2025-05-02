@@ -5,7 +5,7 @@ import PageHeader from "@/app/_components/PageHeader";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Projects",
+  title: "UBC Query",
 };
 
 export default function UBCQuery() {
