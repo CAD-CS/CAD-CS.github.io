@@ -9,5 +9,5 @@ export default function NavBar() {
         <NavLink path="/articles" text="Articles" />
       </ul>
     </nav>
-  ); 
+  );
 }

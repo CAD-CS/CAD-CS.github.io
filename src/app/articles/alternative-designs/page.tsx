@@ -87,17 +87,14 @@ export default function AlternativeDesigns() {
           A fork follows a similar structure: (f g h) y, which equates to
           g(f(y), h(y)). This pattern is particularly useful for computing the
           mean of a list, as it allows simultaneous application of functions to
-          different aspects of the input data. 
+          different aspects of the input data.
         </ContentParagraph>
-        <ContentHeader>The Evolution of Design Patterns</ContentHeader>
+        <ContentHeader>Conclusion</ContentHeader>
         <ContentParagraph>
           Design patterns emerge wherever there is a thriving ecosystem of
           developers collaborating and publishing their work. As seen with the
           diverse patterns in OOP, functional programming, and array
           programming, each paradigm fosters unique problem-solving approaches.
-          As functional and array programming continue to gain traction, more
-          domain-specific design patterns will undoubtedly arise, further
-          enriching the software development landscape.
         </ContentParagraph>
       </ContentBox>
     </article>

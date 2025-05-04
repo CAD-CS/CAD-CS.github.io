@@ -13,10 +13,6 @@ export default function UBCQuery() {
     <>
       <PageHeader>UBC Query</PageHeader>
       <ContentBox>
-        <ContentHeader>Technologies used</ContentHeader>
-        <ContentParagraph>
-          TypeScript, Mocha, Chai, Node.js, Express.js
-        </ContentParagraph>
         <ContentHeader>Project Overview</ContentHeader>
         <ContentParagraph>
           For this project, my partner and I were tasked with developing a
@@ -25,6 +21,15 @@ export default function UBCQuery() {
           validate the file to ensure proper formatting before allowing users to
           query the data for insights, such as the average grade for a course or
           the number of rooms in a building.
+        </ContentParagraph>
+        <ContentParagraph>
+          The primary programming language used was TypeScript with Mocha + Chai
+          used for testing and NodeJS and Express.js used for the backend.
+        </ContentParagraph>
+        <ContentParagraph>
+          Please note that since the project was a part of my coursework, I am
+          unable to host the code on my GitHub due to academic integrity
+          concerns.
         </ContentParagraph>
         <ContentHeader>My Role</ContentHeader>
         <ContentParagraph>

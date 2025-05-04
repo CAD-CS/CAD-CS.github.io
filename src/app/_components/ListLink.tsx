@@ -9,11 +9,16 @@ interface ListLinkProps {
 export default function ListLink({
   basePath,
   targetFolder,
-  text
+  text,
 }: ListLinkProps) {
   return (
     <li>
-      <Link href={"/" + basePath + "/" + targetFolder} className="hover:text-purple-700 hover:italic">{text}</Link>
+      <Link
+        href={"/" + basePath + "/" + targetFolder}
+        className="hover:text-purple-700 hover:italic"
+      >
+        {text}
+      </Link>
     </li>
   );
 }
