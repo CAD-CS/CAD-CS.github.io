@@ -17,7 +17,7 @@ export default function ListLink({
     <li>
       <Link
         href={"/" + basePath + "/" + targetFolder}
-        className="hover:text-purple-700 hover:italic"
+        className="hover:text-red-600 hover:italic"
       >
         <span className="font-bold">{primaryText}</span> {" | " + secondaryText}
       </Link>

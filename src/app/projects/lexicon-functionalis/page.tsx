@@ -21,7 +21,7 @@ export default function LexiconFunctionalis() {
             href="https://dict.org/bin/Dict"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline hover:text-purple-700 hover:italic"
+            className="underline hover:text-red-600 hover:italic"
           >
             dict.org
           </a>
@@ -39,7 +39,7 @@ export default function LexiconFunctionalis() {
             href="https://norvig.com/spell-correct.html"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline hover:text-purple-700 hover:italic"
+            className="underline hover:text-red-600 hover:italic"
           >
             here
           </a>

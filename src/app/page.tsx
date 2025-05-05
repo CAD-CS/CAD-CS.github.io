@@ -57,7 +57,7 @@ export default function Home() {
             href="https://github.com/CAD-CS/CAD-CS.github.io"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline hover:text-purple-700 hover:italic"
+            className="underline hover:text-red-600 hover:italic"
           >
             GitHub
           </a>

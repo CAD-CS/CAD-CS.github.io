@@ -3,34 +3,26 @@
 @tailwind utilities;
 
 :root {
-  --background-color: #0a1a2a; /* Defines the main background color */
-  --primary-color: #1a3f5f; /* Defines the primary color */
-  --secondary-color: #2a5f7f; /* Defines the secondary color */
-  --accent-color: #0f2f4f; /* Defines the accent color */
-  --text-color: #d0e0f0; /* Defines the text color */
+  --background-color: #1A2A33;
+  --primary-color: #2C3E44;
+  --secondary-color: #85707E;
+  --accent-color: #B07D62;
+  --text-color: #eae6da;
 }
 
 body {
-  background-color: var(
-    --background-color
-  ); /* Sets the background color of the whole page */
-  color: var(--text-color); /* Sets the default text color */
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 .primary {
-  background-color: var(
-    --primary-color
-  ); /* Sets the background color for elements with class 'primary' and the 'header' */
+  background-color: var(--primary-color);
 }
 
 .secondary {
-  background-color: var(
-    --secondary-color
-  ); /* Sets the background color for elements with class 'secondary' */
+  background-color: var(--secondary-color);
 }
 
 .accent {
-  background-color: var(
-    --accent-color
-  ); /* Sets the background color for elements with class 'accent' */
+  background-color: var(--accent-color);
 }
