@@ -17,12 +17,14 @@ export default function Articles() {
           <ListLink
             basePath="articles"
             targetFolder="alternative-designs"
-            text="Monads, Forks, And Hooks: Alternative Design Patterns In Non-Object Oriented Languages"
+            primaryText="Monads, Forks, And Hooks"
+            secondaryText="Alternative Design Patterns In Non-Object Oriented Languages"
           />
           <ListLink
             basePath="articles"
             targetFolder="monadic-dyadic"
-            text="Monadic and Dyadic Functions: Breaking Free from the Mold"
+            primaryText="Monadic and Dyadic Functions"
+            secondaryText="Breaking Free from the Mold"
           />
         </List>
       </ContentBox>

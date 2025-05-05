@@ -3,6 +3,7 @@ import ListLink from "../_components/ListLink";
 import PageHeader from "../_components/PageHeader";
 import ContentBox from "../_components/ContentBox";
 import List from "../_components/List";
+import ContentParagraph from "../_components/ContentParagraph";
 
 export const metadata: Metadata = {
   title: "Projects",
@@ -13,36 +14,54 @@ export default function Projects() {
     <>
       <PageHeader>Projects</PageHeader>
       <ContentBox>
+        <ContentParagraph>
+          For the code for these projects, please see my{" "}
+          <a
+            href="https://github.com/CAD-CS"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-purple-700 hover:italic"
+          >
+            GitHub
+          </a>
+          .
+        </ContentParagraph>
         <List>
           <ListLink
             basePath="projects"
             targetFolder="course-insights"
-            text="Course Insights: A Course Data Visualization And Analysis Tool | JavaScript, Python, React, NodeJS, Django, D3, Docker"
+            primaryText="Course Insights: A Course Data Visualization And Analysis Tool"
+            secondaryText="JavaScript, Python, React, NodeJS, Django, D3, Docker"
           />
           <ListLink
             basePath="projects"
             targetFolder="pc-builder"
-            text="PC Builder: A PC Building Application | JavaScript, PostgreSQL, React, NodeJS, Express.js"
+            primaryText="PC Builder: A PC Building Application"
+            secondaryText="JavaScript, PostgreSQL, React, NodeJS, Express.js"
           />
           <ListLink
             basePath="projects"
             targetFolder="ubc-query"
-            text="UBC Query: A Querying Application for UBC Data | TypeScript, NodeJS, Express.js, Mocha, Chai"
+            primaryText="UBC Query: A Querying Application for UBC Data"
+            secondaryText="TypeScript, NodeJS, Express.js, Mocha, Chai"
           />
           <ListLink
             basePath="projects"
             targetFolder="notepad"
-            text="NotePad: A Simple Note Taking Application | Java, Java Swing, JUnit"
+            primaryText="NotePad: A Simple Note Taking Application"
+            secondaryText="Java, Java Swing, JUnit"
           />
           <ListLink
             basePath="projects"
             targetFolder="lexicon-functionalis"
-            text="Lexicon Functionalis: An Online Dictionary Client With A Spell Checker | Haskell"
+            primaryText="Lexicon Functionalis: An Online Dictionary Client With A Spell Checker"
+            secondaryText="Haskell"
           />
           <ListLink
             basePath="projects"
             targetFolder="prolog-integrator"
-            text="Prolog Integrator: A Symbolic Integration Application | Prolog"
+            primaryText="Prolog Integrator: A Symbolic Integration Application"
+            secondaryText="Prolog"
           />
         </List>
       </ContentBox>

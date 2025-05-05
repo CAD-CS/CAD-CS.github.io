@@ -3,13 +3,15 @@ import Link from "next/link";
 interface ListLinkProps {
   basePath: string;
   targetFolder: string;
-  text: string;
+  primaryText: string;
+  secondaryText: string;
 }
 
 export default function ListLink({
   basePath,
   targetFolder,
-  text,
+  primaryText,
+  secondaryText
 }: ListLinkProps) {
   return (
     <li>
@@ -17,7 +19,7 @@ export default function ListLink({
         href={"/" + basePath + "/" + targetFolder}
         className="hover:text-purple-700 hover:italic"
       >
-        {text}
+        <span className="font-bold">{primaryText}</span> {" | " + secondaryText}
       </Link>
     </li>
   );
