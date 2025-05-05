@@ -23,7 +23,7 @@ export default function Articles() {
           <ListLink
             basePath="articles"
             targetFolder="monadic-dyadic"
-            primaryText="Monadic and Dyadic Functions"
+            primaryText="Monadic And Dyadic Functions"
             secondaryText="Breaking Free from the Mold"
           />
         </List>
