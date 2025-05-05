@@ -15,21 +15,20 @@ export default function Home() {
       <ContentBox>
         <ContentHeader>Who am I?</ContentHeader>
         <ContentParagraph>
-          I am a software developer and IT support analyst passionate about
-          solving challenges and delivering value. A quick learner and team
-          player, I bring technical expertise and adaptability to any
+          I am a software developer and a junior IT support analyst passionate
+          about solving challenges and delivering value. A quick learner and
+          team player, I bring technical expertise and adaptability to any
           environment.
         </ContentParagraph>
         <ContentParagraph>
-          My experience spans multiple programming languages, including
-          JavaScript, TypeScript, Python, Java, and C++. I am proficient in
-          frameworks like React and Next.js for web development, Jest and JUnit
-          for testing, and D3 for data visualization. Additionally, I have
-          extensive knowledge of SQL (PostgreSQL), database management tools
-          like pgAdmin, and DevOps tools such as Docker and GitHub Actions. My
-          projects range from building websites and text editors to developing
-          data analytics and visualization tools, showcasing my ability to
-          master new technologies quickly.
+          My software development experience spans multiple programming
+          languages, including JavaScript, TypeScript, Python, Java, and C++. I
+          am proficient in frameworks like React and NextJS for web development,
+          Jest and JUnit for testing, and D3 for data visualization.
+          Additionally, I have extensive knowledge of SQL (PostgreSQL), database
+          management tools like pgAdmin, and DevOps tools such as Docker and
+          GitHub Actions. My projects range from building websites and text
+          editors to developing data analytics and visualization tools.
         </ContentParagraph>
         <ContentParagraph>
           As an IT expert, I provide confidential troubleshooting and
@@ -40,18 +39,19 @@ export default function Home() {
           non-technical audiences, writing clear documentation, and handling
           sensitive information with discretion. My hands-on experience includes
           industry-standard tools like ServiceNow for ticketing, Confluence for
-          documentation, and Microsoft Power Automate.
+          documentation, and Microsoft Power Automate for processing user
+          requests.
         </ContentParagraph>
         <ContentParagraph>
           Beyond technical skills, my greatest strengths lie in collaboration,
-          client communication, conflict resolution, and mentoring junior hires.
-          I thrive in team environments, ensuring successful project outcomes
-          and fostering positive workplace relationships.
+          client communication, and conflict resolution. I also have experience
+          mentoring and training junior hires. I thrive in team environments,
+          ensuring successful project outcomes and fostering positive workplace
+          relationships.
         </ContentParagraph>
         <ContentHeader>A little about this site</ContentHeader>
         <ContentParagraph>
-          This site is a personal project that I built to showcase my skills and
-          projects. It is built using Next.js, TypeScript, and Tailwind CSS. The
+          This site is built using NextJS, TypeScript, and Tailwind CSS. The
           source code is available on{" "}
           <a
             href="https://github.com/CAD-CS/CAD-CS.github.io"

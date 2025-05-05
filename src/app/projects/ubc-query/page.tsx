@@ -17,14 +17,14 @@ export default function UBCQuery() {
         <ContentParagraph>
           For this project, my partner and I were tasked with developing a
           querying application. The app needed to process a zip file containing
-          either a list of courses or rooms at UBC. It would then unzip and
+          a list of either courses or rooms at UBC. It would then unzip and
           validate the file to ensure proper formatting before allowing users to
           query the data for insights, such as the average grade for a course or
           the number of rooms in a building.
         </ContentParagraph>
         <ContentParagraph>
-          The primary programming language used was TypeScript with Mocha + Chai
-          used for testing and NodeJS and Express.js used for the backend.
+          The primary programming language was TypeScript, with Mocha + Chai for
+          testing and NodeJS with Express.js for the backend.
         </ContentParagraph>
         <ContentParagraph>
           Please note that since the project was a part of my coursework, I am
@@ -57,7 +57,7 @@ export default function UBCQuery() {
           structure until it reached the table holding the relevant information.
           Once located, the extracted data was converted into instances of the
           Data class. While I am greatly simplifying the implementation, this
-          captures the essence of the process.
+          summary captures the essence of the process.
         </ContentParagraph>
         <ContentHeader>Storing and Querying Data</ContentHeader>
         <ContentParagraph>
