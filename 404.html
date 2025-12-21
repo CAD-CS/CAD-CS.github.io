@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Redirecting…</title>
+    <script>
+        // Redirect all unknown paths back to index.html
+        const redirect = () => {
+            const path = window.location.pathname;
+            sessionStorage.setItem("redirect-path", path);
+            window.location.replace("/");
+        };
+        redirect();
+    </script>
+</head>
+
+<body></body>
+
+</html>
