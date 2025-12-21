@@ -1,29 +1,20 @@
-const routes = {
-  "/": "<home-page></home-page>",
-  "/about": "<about-page></about-page>",
-  "/contact": "<contact-page></contact-page>",
-  "/blog": "<blog-page></blog-page>",
-  "/site-info": "<site-info-page></site-info-page>",
+const routes =
+{
+    "Home": "<home-page></home-page>",
+    "About": "<about-page></about-page>",
+    "Contact": "<contact-page></contact-page>",
+    "Blog": "<blog-page></blog-page>",
+    "Site Info": "<site-info-page></site-info-page>",
 };
 
-let currentRoute = "/";
-
 function render(path) {
-  const view = routes[path] || "<h1>404</h1>";
-  document.getElementById("content").innerHTML = view;
+    const view = routes[path] || "<h1>404</h1>";
+    document.getElementById("content").innerHTML = view;
 }
 
-function navigate(path) {
-  currentRoute = path;   // store route internally
-  render(path);          // update UI
-}
-
-document.addEventListener("click", (e) => {
-  if (e.target.matches("a[data-link]")) {
-    e.preventDefault();
-    navigate(e.target.getAttribute("href"));
-  }
+document.addEventListener("navigate", (e) => {
+    render(e.detail.path);
 });
 
-// initial render
-render(currentRoute);
+
+render("Home");

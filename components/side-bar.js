@@ -8,18 +8,19 @@ template.innerHTML = `
 </aside>
 `;
 
-const tabs = [
-    { name: 'Home', url: '/' },
-    { name: 'About', url: '/about' },
-    { name: 'Contact', url: '/contact' },
-    { name: 'Blog', url: '/blog' },
-    { name: 'Site Info', url: '/site-info' }
-];
+const tabs =
+    [
+        'Home',
+        'About',
+        'Contact',
+        'Blog',
+        'Site Info'
+    ];
 
 for (const tab of tabs) {
     const li = document.createElement('li');
     li.innerHTML = `
-        <a href="${tab.url}" target="_blank" rel="noopener noreferrer" data-link>${tab.name}</a>
+        <button id="${tab}" data-link>${tab}</button>
     `;
     template.content.querySelector('ul').appendChild(li);
 }
@@ -30,6 +31,17 @@ class SideBar extends HTMLElement {
         this.root = this.attachShadow({ mode: 'open' });
         this.root.append(template.content.cloneNode(true));
     }
+    connectedCallback() {
+        this.shadowRoot.addEventListener("click", (e) => {
+            const link = e.target.closest("[data-link]");
+            this.dispatchEvent(new CustomEvent("navigate", {
+                detail: { path: link.id },
+                bubbles: true,
+                composed: true,
+            }));
+        });
+    }
+
 }
 
 customElements.define('side-bar', SideBar);
