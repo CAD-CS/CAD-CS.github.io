@@ -1,0 +1,7 @@
+If you’re curious, this site is built with plain HTML, CSS, and JavaScript.
+
+You might wonder why, especially given my professional background. The first version was actually made with a modern framework (NextJS), which made perfect sense considering my experience. It also felt a little too familiar, and I wanted to challenge myself with something different.
+
+I switched to a lightweight setup using Alpine and Tailwind CSS for styling, paired with Web Components for reusable structure. After experimenting for a while, I realized I wanted an even deeper learning experience, so I stripped everything back and rebuilt the site with only vanilla JavaScript and CSS.
+
+It turned out to be one of the best decisions I made. I gained a much stronger understanding of the DOM, web dev fundamentals, and got hands‑on experience with Web Components. It was a blast, and who knows, maybe Web Components really are the future of web development ;)
