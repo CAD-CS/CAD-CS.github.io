@@ -1,5 +1,10 @@
 const template = document.createElement('template');
 template.innerHTML = `
+<style>
+    pre:hover {
+        color: var(--hover-colour);
+    }
+</style>
 <pre></pre>
 `;
 

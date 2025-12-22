@@ -1,5 +1,13 @@
 const template = document.createElement('template');
 template.innerHTML = `
+<style>
+    a, a:visited {
+        color: #00bfff;
+    }
+    a:hover {
+        color: #ff2d2d;
+    } 
+</style>
 <main-content>
     <h1>Contact Me!</h1>
     <p>My contact information:</p>

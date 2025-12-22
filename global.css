@@ -1,0 +1,24 @@
+:root {
+    --text-colour: #39FF14;
+    --hover-colour: #ffbf00;
+}
+
+body {
+    background-color: black;
+    color: var(--text-colour);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#app-root {
+    display: flex;
+    width: 10px;
+}
+
+#side-bar-container {
+    display: inline;
+}
+
+#content {
+    display: inline;
+}
+

@@ -1,5 +1,22 @@
 const template = document.createElement('template');
 template.innerHTML = `
+<style>
+    button {
+        color: var(--text-colour);
+        background: none;
+        border: none;
+
+    }
+    button:hover {
+        cursor: pointer;
+        color: var(--hover-colour);
+    }
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+</style>
+
 <aside>
     <nav>
         <ul>
