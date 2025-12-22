@@ -1,7 +1,6 @@
-If you’re curious, this site is built with plain HTML, CSS, and JavaScript.
+This site is built with plain HTML, CSS, and JavaScript.
 
-You might wonder why, especially given my professional background. The first version was actually made with a modern framework (NextJS), which made perfect sense considering my experience. It also felt a little too familiar, and I wanted to challenge myself with something different.
+It did not start that way. I originally built it with Next.js, which fit my background but felt a little too familiar. I wanted a challenge, so I moved to a lighter stack with Alpine, Tailwind, and Web Components. After some experimenting, I decided to go all in on fundamentals and rebuilt everything with vanilla JS and CSS.
 
-I switched to a lightweight setup using Alpine and Tailwind CSS for styling, paired with Web Components for reusable structure. After experimenting for a while, I realized I wanted an even deeper learning experience, so I stripped everything back and rebuilt the site with only vanilla JavaScript and CSS.
+It turned out to be a great decision. I deepened my understanding of the DOM, sharpened my core web development skills, and got plenty of hands‑on experience with Web Components. It was a lot of fun, and who knows, maybe Web Components really are the future of the web ;)
 
-It turned out to be one of the best decisions I made. I gained a much stronger understanding of the DOM, web dev fundamentals, and got hands‑on experience with Web Components. It was a blast, and who knows, maybe Web Components really are the future of web development ;)

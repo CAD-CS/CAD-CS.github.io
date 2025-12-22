@@ -1,10 +1,8 @@
 const routes =
 {
     "Home": "<home-page></home-page>",
-    "About": "<about-page></about-page>",
     "Contact": "<contact-page></contact-page>",
-    "Blog": "<blog-page></blog-page>",
-    "Site Info": "<site-info-page></site-info-page>",
+    "Site info": "<site-info-page></site-info-page>",
 };
 
 function render(path) {

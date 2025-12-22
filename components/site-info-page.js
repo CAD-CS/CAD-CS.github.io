@@ -1,8 +1,18 @@
 const template = document.createElement('template');
 template.innerHTML = `
-<main-content>
-    <pre></pre>
-</main-content>
+<style>
+    pre {
+        white-space: pre-wrap;
+        word-break: break-word;
+        overflow-wrap: anywhere;
+    }
+        
+    h1:hover, h2:hover, p:hover, pre:hover {
+        color: var(--hover-colour);
+    }
+</style>
+<h1>Why keep it simple?</h1>
+<pre></pre>
 `;
 
 class SiteInfoPage extends HTMLElement {

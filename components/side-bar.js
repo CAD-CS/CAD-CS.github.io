@@ -7,14 +7,23 @@ template.innerHTML = `
         border: none;
 
     }
-    button:hover {
-        cursor: pointer;
-        color: var(--hover-colour);
-    }
+    
     ul {
         list-style-type: none;
-        padding: 0;
+        padding-left: 10px;
     }
+    
+    li:hover {
+        border-color: var(--hover-colour);
+        color: var(--hover-colour);
+        border-style: solid;
+        border-width: thin;
+    }
+    li:hover * {
+        color: var(--hover-colour);
+        cursor: pointer;
+    }
+
 </style>
 
 <aside>
@@ -28,17 +37,18 @@ template.innerHTML = `
 const tabs =
     [
         'Home',
-        'About',
-        'Contact',
-        'Blog',
-        'Site Info'
+        'Site info',
+        'Contact'
     ];
 
 for (const tab of tabs) {
     const li = document.createElement('li');
     li.innerHTML = `
-        <button id="${tab}" data-link>${tab}</button>
+       <span id="${tab}"></span><button id="${tab}" data-link>${tab}</button>
     `;
+    if (tab === 'Home') {
+        li.querySelector('span').innerHTML = '>';
+    }
     template.content.querySelector('ul').appendChild(li);
 }
 
@@ -48,6 +58,7 @@ class SideBar extends HTMLElement {
         this.root = this.attachShadow({ mode: 'open' });
         this.root.append(template.content.cloneNode(true));
     }
+
     connectedCallback() {
         this.shadowRoot.addEventListener("click", (e) => {
             const link = e.target.closest("[data-link]");
@@ -56,6 +67,13 @@ class SideBar extends HTMLElement {
                 bubbles: true,
                 composed: true,
             }));
+
+            this.shadowRoot.querySelectorAll('span').forEach(span => {
+                span.innerHTML = '';
+            });
+
+            const span = this.shadowRoot.getElementById(link.id);
+            span.innerHTML = '>';
         });
     }
 
