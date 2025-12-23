@@ -21,3 +21,11 @@ This isn’t the most optimal approach, but with only three options, the perform
 This turned out to be much simpler than expected. I assumed it would take over 100 lines of code, but the final implementation was under 20.
 
 The routing works by intercepting the click event from sidebar links and updating the inner HTML of the page container accordingly.
+
+## Conditional rendering
+
+This was another thing I found easier than I thought it would be. Since I am making a fetch request for my ascii art, there is a split second when the header appears to the user before the art does.
+
+To prevent this behaviour I used the 'visibility' property in the CSS to hide the contents of the page until the ascii art was fully loaded.
+
+Although I found it easier, it was still not as idomatic as the way Angular or React does it.
