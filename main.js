@@ -1,5 +1,5 @@
 import './components/ascii-art.js'
 import './components/side-bar.js'
-import './components/home-page.js'
-import './components/contact-page.js'
-import './components/site-info-page.js'
+import './pages/home-page.js'
+import './pages/contact-page.js'
+import './pages/site-info-page.js'

@@ -29,10 +29,8 @@ template.innerHTML = `
 </ul>
 `;
 
-class ContactPage extends HTMLElement 
-{
-    constructor()
-    {
+class ContactPage extends HTMLElement {
+    constructor() {
         super();
         this.root = this.attachShadow({ mode: 'open' });
         this.root.append(template.content.cloneNode(true));

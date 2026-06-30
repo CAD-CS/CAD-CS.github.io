@@ -1,3 +1,20 @@
+const art = `
+
+██████╗  █████╗ ██████╗ ███████╗ █████╗ 
+██╔══██╗██╔══██╗██╔══██╗██╔════╝██╔══██╗
+██████╔╝███████║██████╔╝███████╗███████║
+██╔═══╝ ██╔══██║██╔══██╗╚════██║██╔══██║
+██║     ██║  ██║██║  ██║███████║██║  ██║
+╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+
+██╗  ██╗ █████╗ ███████╗██╗  ██╗███████╗███╗   ███╗██╗
+██║  ██║██╔══██╗██╔════╝██║  ██║██╔════╝████╗ ████║██║
+███████║███████║███████╗███████║█████╗  ██╔████╔██║██║
+██╔══██║██╔══██║╚════██║██╔══██║██╔══╝  ██║╚██╔╝██║██║
+██║  ██║██║  ██║███████║██║  ██║███████╗██║ ╚═╝ ██║██║
+╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚══════╝╚═╝     ╚═╝╚═╝
+
+`;
 const template = document.createElement('template');
 template.innerHTML = `
 <style>
@@ -5,7 +22,7 @@ template.innerHTML = `
         color: var(--hover-colour);
     }
 </style>
-<pre></pre>
+<pre>${art}</pre>
 `;
 
 class AsciiArt extends HTMLElement 
@@ -15,18 +32,6 @@ class AsciiArt extends HTMLElement
         super();
         this.root = this.attachShadow({ mode: 'open' });
         this.root.append(template.content.cloneNode(true));
-    }
-
-    async connectedCallback()
-    {        
-        const art = await this.getArt();
-        this.root.querySelector('pre').textContent = art;
-    }
-
-    async getArt() 
-    {
-        const art = await fetch('./art/ascii.txt');
-        return await art.text();
     }
 }
 
