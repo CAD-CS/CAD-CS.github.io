@@ -1,4 +1,4 @@
-const txt = `
+const text = `
 
 I have extensive experience working in collaborative engineering environments, including contributing to a team of about ten engineers at Planview on Hub, a cross‑system synchronization web app. My work covered the <b>whole stack</b>, from <b>frontend</b> modernization (AngularJS/JavaScript --> React/TypeScript) to <b>backend</b> services (Java), and <b>end-to-end feature delivery and design</b>. I also supported our team’s <b>DevOps</b> needs and release processes. 
 
@@ -31,7 +31,7 @@ template.innerHTML = `
     <ascii-art></ascii-art>
     <h1 style="font-style: italic;">SOFTWARE ENGINEER | GAME DEVELOPER | IT SUPPORT ANALYST</h1>
     <h2>A quick spiel (some would call this an elevator pitch)</h2>
-    <pre>${txt}</pre>
+    <pre>${text}</pre>
 </div>
 `;
 
