@@ -8,6 +8,7 @@ It turned out to be a great decision. I deepened my understanding of the DOM, an
 This reflects my general approach to learning new technologies, and that is starting from first principles and building up to a higher level of abstraction. Since, as a rule of thumb, it's easier to go up an abstraction than go down. 
 
 `
+
 const template = document.createElement('template');
 template.innerHTML = `
 <style>
@@ -15,6 +16,7 @@ template.innerHTML = `
         white-space: pre-wrap;
         word-break: break-word;
         overflow-wrap: anywhere;
+        line-height: 1.5;
     }
         
     h1:hover, h2:hover, p:hover, pre:hover {

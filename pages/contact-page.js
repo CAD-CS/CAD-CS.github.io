@@ -1,15 +1,38 @@
 const template = document.createElement('template');
 template.innerHTML = `
 <style>
+    :host {
+        --link-colour: #00bfff;
+        --link-hover-colour: #ff2d2d;
+    }
+
     h1:hover, h2:hover, span:hover {
         color: var(--hover-colour);
     }
+
     a, a:visited {
-        color: #00bfff;
+        color: var(--link-colour);
+        text-decoration: none;
     }
+
     a:hover {
-        color: #ff2d2d;
-    } 
+        color: var(--link-hover-colour);
+        text-decoration: underline;
+    }
+
+    a:focus-visible {
+        outline: 2px solid var(--hover-colour);
+        outline-offset: 2px;
+    }
+
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    li {
+        margin-bottom: 0.5rem;
+    }
 </style>
 <h1>Have I piqued your interest?</h1>
 <h2>Contact me!</h2>

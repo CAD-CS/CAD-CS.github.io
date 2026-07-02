@@ -1,6 +1,18 @@
 :root {
     --text-colour: #39FF14;
     --hover-colour: #ffbf00;
+    --border-colour: #1e7c0d;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -12,27 +24,62 @@ body {
 #app-root {
     display: flex;
     width: 90%;
-    height: 800px;
+    min-height: 100vh;
+    margin: 0 auto;
+    gap: 10px;
 }
 
 #side-bar-container {
     width: 15%;
-    height: 20%;
-    border: #1e7c0d solid 2px;
-    margin-right: 10px;
+    min-width: 150px;
+    border: var(--border-colour) solid 2px;
+    transition: border-color 0.2s ease;
 }
 
 #side-bar-container:hover {
     border-color: var(--hover-colour);
 }
 
+#side-bar-container:focus-within {
+    border-color: var(--hover-colour);
+}
+
 #content {
-    width: 85%;
-    border: #1e7c0d solid 2px;
+    flex: 1;
+    border: var(--border-colour) solid 2px;
     padding-left: 25px;
     padding-right: 25px;
+    overflow-y: auto;
+    transition: border-color 0.2s ease;
 }
 
 #content:hover {
     border-color: var(--hover-colour);
+}
+
+@media (max-width: 768px) {
+    #app-root {
+        flex-direction: column;
+        width: 95%;
+    }
+
+    #side-bar-container {
+        width: 100%;
+        min-width: auto;
+        height: auto;
+    }
+
+    #content {
+        width: 100%;
+    }
+}
+
+button:focus-visible {
+    outline: 2px solid var(--hover-colour);
+    outline-offset: 2px;
+}
+
+a:focus-visible {
+    outline: 2px solid var(--hover-colour);
+    outline-offset: 2px;
 }
