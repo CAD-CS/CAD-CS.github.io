@@ -10,12 +10,6 @@ function getCurrentPath() {
     return hash || 'home';
 }
 
-function handleUnsupportedPage(contentElement) {
-    const notFound = document.createElement('div');
-    notFound.innerHTML = '<h1>404 - Page not found</h1>';
-    contentElement.appendChild(notFound);
-}
-
 function render(path) {
     const tag = routeMap[path];
     const contentElement = document.getElementById('app-content');
@@ -34,6 +28,12 @@ function render(path) {
         bubbles: true,
         composed: true,
     }));
+}
+
+function handleUnsupportedPage(contentElement) {
+    const notFound = document.createElement('div');
+    notFound.innerHTML = '<h1>404 - Page not found</h1>';
+    contentElement.appendChild(notFound);
 }
 
 document.addEventListener('route-change-request', (e) => {

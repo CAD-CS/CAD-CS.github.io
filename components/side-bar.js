@@ -2,8 +2,7 @@ import { routes } from '../routes.js';
 
 const selectorIcon = '&gt;'; // '>'
 
-const styles =
-`
+const styles = `
 <style>
     button {
         color: var(--text-colour);
@@ -49,8 +48,7 @@ const styles =
 </style>
 `;
 
-const html =
-`
+const html = `
 <aside>
     <nav aria-label='Site navigation'>
         <ul>
@@ -60,8 +58,7 @@ const html =
 `;
 
 const template = document.createElement('template');
-template.innerHTML =
-`
+template.innerHTML = `
 ${styles}
 ${html}
 `;
@@ -71,23 +68,18 @@ class SideBar extends HTMLElement {
         super();
         this.root = this.attachShadow({ mode: 'open' });
         this.root.append(template.content.cloneNode(true));
-        this.currentPath = 'home';
     }
 
     connectedCallback() {
+        this.initializeList();
+        this.addEventListeners();
+        this.initializeActiveState();
+    }
+
+    initializeList() {
         const ul = this.root.querySelector('ul');
         ul.innerHTML = '';
-
         routes.forEach(route => this.initializeNavigationItem(route, ul));
-
-        this.root.addEventListener('click', (e) => this.updateSelection(e));
-
-        document.addEventListener('route-change', (e) => {
-            this.updateActiveState(e.detail.path);
-        });
-
-        const initialPath = window.location.hash.slice(1) || 'home';
-        this.updateActiveState(initialPath);
     }
 
     initializeNavigationItem(route, ul) {
@@ -105,6 +97,11 @@ class SideBar extends HTMLElement {
             .replace(/^\w/, c => c.toUpperCase());
     }
 
+    addEventListeners() {
+        this.root.addEventListener('click', (e) => this.updateSelection(e));
+        document.addEventListener('route-change', (e) => this.updateActiveState(e.detail.path));
+    }
+
     updateSelection(e) {
         const link = e.target.closest('[data-link]');
         if (!link) return;
@@ -120,8 +117,6 @@ class SideBar extends HTMLElement {
     }
 
     updateActiveState(path) {
-        this.currentPath = path;
-
         this.root.querySelectorAll('.nav-indicator').forEach(span => {
             span.innerHTML = '';
         });
@@ -138,6 +133,11 @@ class SideBar extends HTMLElement {
             }
             activeButton.setAttribute('aria-current', 'page');
         }
+    }
+
+    initializeActiveState() {
+        const initialPath = window.location.hash.slice(1) || 'home';
+        this.updateActiveState(initialPath);
     }
 }
 

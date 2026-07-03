@@ -1,5 +1,5 @@
 const art =
-`
+    `
 
 ██████╗  █████╗ ██████╗ ███████╗ █████╗ 
 ██╔══██╗██╔══██╗██╔══██╗██╔════╝██╔══██╗
@@ -17,8 +17,7 @@ const art =
 
 `;
 
-const styles =
-`
+const styles = `
 <style>
     :host {
         --ascii-art-colour: var(--text-colour, #39FF14);
@@ -37,14 +36,12 @@ const styles =
 </style>
 `;
 
-const html =
-`
+const html = `
 <pre>${art}</pre>
 `;
 
 const template = document.createElement('template');
-template.innerHTML =
-`
+template.innerHTML = `
 ${styles}
 ${html}
 `;

@@ -1,5 +1,4 @@
-const txt = 
-`
+const txt = `
 
 I have extensive experience working in collaborative engineering environments, including contributing to a team of about ten engineers at Planview on Hub, a cross‑system synchronization web app. My work covered the whole stack, from frontend modernization (AngularJS/JavaScript --> React/TypeScript) to backend services (Java), and end-to-end feature delivery and design. I also supported our team's DevOps needs and release processes.
 
@@ -12,8 +11,7 @@ Community involvement is important to me, and I enjoy using my technical skills 
 As can be seen by the design of this site, I am also a big Fallout and retro-computing fan!
 `;
 
-const styles =
-`
+const styles = `
 <style>
     pre {
         white-space: pre-wrap;
@@ -34,8 +32,7 @@ const styles =
 </style>
 `;
 
-const html =
-`
+const html = `
 <div class='container'>
     <ascii-art></ascii-art>
     <h1>SOFTWARE ENGINEER | GAME DEVELOPER | IT SUPPORT ANALYST</h1>
@@ -45,8 +42,7 @@ const html =
 `;
 
 const template = document.createElement('template');
-template.innerHTML =
-`
+template.innerHTML = `
 ${styles}
 ${html}
 `;

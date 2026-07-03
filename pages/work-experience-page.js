@@ -1,5 +1,4 @@
-const styles =
-`
+const styles = `
 <style>
     h1:hover, h2:hover, h3:hover {
         color: var(--hover-colour);
@@ -28,8 +27,7 @@ const styles =
 </style>
 `;
 
-const html =
-`
+const html = `
 <h1>Work Experience</h1>
 
 <div class='job'>
@@ -69,8 +67,7 @@ const html =
 `;
 
 const template = document.createElement('template');
-template.innerHTML =
-`
+template.innerHTML = `
 ${styles}
 ${html}
 `;

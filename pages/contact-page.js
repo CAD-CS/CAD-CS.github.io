@@ -1,5 +1,4 @@
-const styles =
-`
+const styles = `
 <style>
     :host {
         --link-colour: #00bfff;
@@ -36,8 +35,7 @@ const styles =
 </style>
 `;
 
-const html =
-`
+const html = `
 <h1>Have I piqued your interest?</h1>
 <h2>Contact me!</h2>
 <ul>
@@ -57,8 +55,7 @@ const html =
 `;
 
 const template = document.createElement('template');
-template.innerHTML =
-`
+template.innerHTML = `
 ${styles}
 ${html}
 `;

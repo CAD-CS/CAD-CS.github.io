@@ -1,5 +1,4 @@
-const styles =
-`
+const styles = `
 <style>
     h1:hover, h2:hover, h3:hover {
         color: var(--hover-colour);
@@ -29,8 +28,7 @@ const styles =
 </style>
 `;
 
-const html =
-`
+const html = `
 <h1>Community Involvement</h1>
 <p>I'm passionate about using my technical skills to support creative communities and spaces.</p>
 
@@ -61,8 +59,7 @@ const html =
 `;
 
 const template = document.createElement('template');
-template.innerHTML = 
-`
+template.innerHTML = `
 ${styles}
 ${html}
 `;
