@@ -1,6 +1,7 @@
-const txt = `
+const txt = 
+`
 
-I have extensive experience working in collaborative engineering environments, including contributing to a team of about ten engineers at Planview on Hub, a cross‑system synchronization web app. My work covered the whole stack, from frontend modernization (AngularJS/JavaScript --> React/TypeScript) to backend services (Java), and end-to-end feature delivery and design. I also supported our team's DevOps needs and release processes. 
+I have extensive experience working in collaborative engineering environments, including contributing to a team of about ten engineers at Planview on Hub, a cross‑system synchronization web app. My work covered the whole stack, from frontend modernization (AngularJS/JavaScript --> React/TypeScript) to backend services (Java), and end-to-end feature delivery and design. I also supported our team's DevOps needs and release processes.
 
 At UBC's Learning Technology Hub, I contributed to Equity Insights, a grade and demographics in-equity visualizer, by building interactive graph displays using D3.
 
@@ -9,10 +10,10 @@ On the operations side, I worked as an IT Support Analyst at the LT Hub, helping
 Community involvement is important to me, and I enjoy using my technical skills to support creative spaces. I have volunteered at events such as the Retro Gaming Expo as an AV Technician and at ProtoCON as a playtester.
 
 As can be seen by the design of this site, I am also a big Fallout and retro-computing fan!
-`
+`;
 
-const template = document.createElement('template');
-template.innerHTML = `
+const styles =
+`
 <style>
     pre {
         white-space: pre-wrap;
@@ -30,9 +31,12 @@ template.innerHTML = `
     h1 {
         font-style: italic;
     }
-
 </style>
-<div class="container">
+`;
+
+const html =
+`
+<div class='container'>
     <ascii-art></ascii-art>
     <h1>SOFTWARE ENGINEER | GAME DEVELOPER | IT SUPPORT ANALYST</h1>
     <h2>A quick spiel (some would call this an elevator pitch)</h2>
@@ -40,6 +44,12 @@ template.innerHTML = `
 </div>
 `;
 
+const template = document.createElement('template');
+template.innerHTML =
+`
+${styles}
+${html}
+`;
 
 class HomePage extends HTMLElement {
     constructor() {

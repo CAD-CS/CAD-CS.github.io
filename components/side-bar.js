@@ -1,21 +1,21 @@
 import { routes } from '../routes.js';
 
-const selectorIcon = "&gt;"; // ">"
+const selectorIcon = '&gt;'; // '>'
 
-const template = document.createElement('template');
-template.innerHTML = `
+const styles =
+`
 <style>
     button {
         color: var(--text-colour);
         background: none;
         border: none;
     }
-    
+
     ul {
         list-style-type: none;
         padding-left: 10px;
     }
-    
+
     li {
         position: relative;
     }
@@ -26,6 +26,7 @@ template.innerHTML = `
         border-style: solid;
         border-width: thin;
     }
+
     li:hover * {
         color: var(--hover-colour);
         cursor: pointer;
@@ -46,21 +47,31 @@ template.innerHTML = `
         display: inline-block;
     }
 </style>
+`;
 
+const html =
+`
 <aside>
-    <nav aria-label="Site navigation">
+    <nav aria-label='Site navigation'>
         <ul>
         </ul>
     </nav>
 </aside>
 `;
 
+const template = document.createElement('template');
+template.innerHTML =
+`
+${styles}
+${html}
+`;
+
 class SideBar extends HTMLElement {
     constructor() {
         super();
-        this.root = this.attachShadow({ mode: "open" });
+        this.root = this.attachShadow({ mode: 'open' });
         this.root.append(template.content.cloneNode(true));
-        this.currentPath = "home";
+        this.currentPath = 'home';
     }
 
     connectedCallback() {
@@ -69,22 +80,22 @@ class SideBar extends HTMLElement {
 
         routes.forEach(route => this.initializeNavigationItem(route, ul));
 
-        this.root.addEventListener("click", (e) => this.updateSelection(e));
+        this.root.addEventListener('click', (e) => this.updateSelection(e));
 
-        document.addEventListener("route-change", (e) => {
+        document.addEventListener('route-change', (e) => {
             this.updateActiveState(e.detail.path);
         });
 
-        const initialPath = window.location.hash.slice(1) || "home";
+        const initialPath = window.location.hash.slice(1) || 'home';
         this.updateActiveState(initialPath);
     }
 
     initializeNavigationItem(route, ul) {
-        const li = document.createElement("li");
+        const li = document.createElement('li');
         const formattedPath = this.formatPath(route.path);
         li.innerHTML = `
-                <span class="nav-indicator" aria-hidden="true"></span>
-                <button data-link="${route.path}" aria-current="false">${formattedPath}</button>
+                <span class='nav-indicator' aria-hidden='true'></span>
+                <button data-link='${route.path}' aria-current='false'>${formattedPath}</button>
             `;
         ul.appendChild(li);
     }
@@ -95,13 +106,13 @@ class SideBar extends HTMLElement {
     }
 
     updateSelection(e) {
-        const link = e.target.closest("[data-link]");
+        const link = e.target.closest('[data-link]');
         if (!link) return;
 
-        const path = link.getAttribute("data-link");
+        const path = link.getAttribute('data-link');
         this.updateActiveState(path);
 
-        this.dispatchEvent(new CustomEvent("route-change-request", {
+        this.dispatchEvent(new CustomEvent('route-change-request', {
             detail: { path },
             bubbles: true,
             composed: true,
@@ -111,23 +122,23 @@ class SideBar extends HTMLElement {
     updateActiveState(path) {
         this.currentPath = path;
 
-        this.root.querySelectorAll(".nav-indicator").forEach(span => {
-            span.innerHTML = "";
+        this.root.querySelectorAll('.nav-indicator').forEach(span => {
+            span.innerHTML = '';
         });
 
-        this.root.querySelectorAll("[data-link]").forEach(btn => {
-            btn.setAttribute("aria-current", "false");
+        this.root.querySelectorAll('[data-link]').forEach(btn => {
+            btn.setAttribute('aria-current', 'false');
         });
 
-        const activeButton = this.root.querySelector(`[data-link="${path}"]`);
+        const activeButton = this.root.querySelector(`[data-link='${path}']`);
         if (activeButton) {
             const indicator = activeButton.previousElementSibling;
-            if (indicator && indicator.classList.contains("nav-indicator")) {
+            if (indicator && indicator.classList.contains('nav-indicator')) {
                 indicator.innerHTML = selectorIcon;
             }
-            activeButton.setAttribute("aria-current", "page");
+            activeButton.setAttribute('aria-current', 'page');
         }
     }
 }
 
-customElements.define("side-bar", SideBar);
+customElements.define('side-bar', SideBar);

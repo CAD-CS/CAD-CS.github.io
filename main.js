@@ -1,7 +1,7 @@
-import './components/ascii-art.js'
-import './components/side-bar.js'
-import './pages/home-page.js'
-import './pages/work-experience-page.js'
-import './pages/contact-page.js'
-import './pages/site-info-page.js'
-import './pages/volunteering-page.js'
+import './components/ascii-art.js';
+import './components/side-bar.js';
+import './pages/home-page.js';
+import './pages/work-experience-page.js';
+import './pages/contact-page.js';
+import './pages/site-info-page.js';
+import './pages/volunteering-page.js';

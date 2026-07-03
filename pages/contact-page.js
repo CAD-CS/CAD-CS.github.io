@@ -1,5 +1,5 @@
-const template = document.createElement('template');
-template.innerHTML = `
+const styles =
+`
 <style>
     :host {
         --link-colour: #00bfff;
@@ -34,22 +34,33 @@ template.innerHTML = `
         margin-bottom: 0.5rem;
     }
 </style>
+`;
+
+const html =
+`
 <h1>Have I piqued your interest?</h1>
 <h2>Contact me!</h2>
 <ul>
     <li><span>Email:</span>
-        <a href="mailto:hash-par@hotmail.com">hash-par@hotmail.com</a>
+        <a href='mailto:hash-par@hotmail.com'>hash-par@hotmail.com</a>
     </li>
     <li><span>LinkedIn:</span>
-        <a href="https://www.linkedin.com/in/parsahashemi" target="_blank">https://www.linkedin.com/in/parsahashemi</a>
+        <a href='https://www.linkedin.com/in/parsahashemi' target='_blank'>https://www.linkedin.com/in/parsahashemi</a>
     </li>
 </ul>
 <h2>You can find more of my work here:</h2>
 <ul>
     <li><span>GitHub:</span>
-        <a href="https://github.com/CAD-CS" target="_blank">https://github.com/CAD-CS</a>
+        <a href='https://github.com/CAD-CS' target='_blank'>https://github.com/CAD-CS</a>
     </li>
 </ul>
+`;
+
+const template = document.createElement('template');
+template.innerHTML =
+`
+${styles}
+${html}
 `;
 
 class ContactPage extends HTMLElement {
