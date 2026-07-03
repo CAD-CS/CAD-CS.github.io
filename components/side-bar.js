@@ -8,6 +8,9 @@ const styles = `
         color: var(--text-colour);
         background: none;
         border: none;
+        font-family: inherit;
+        font-weight: bold;
+        font-size: medium;
     }
 
     ul {
@@ -44,6 +47,7 @@ const styles = `
     .nav-indicator {
         min-width: 1ch;
         display: inline-block;
+        font-weight: bold;
     }
 </style>
 `;

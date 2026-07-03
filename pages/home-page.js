@@ -18,7 +18,7 @@ const styles = `
         word-break: break-word;
         overflow-wrap: anywhere;
         font-size: large;
-        font-family: 'Courier New', Courier, monospace;
+        font-family: inherit;
         line-height: 1.5;
     }
 
