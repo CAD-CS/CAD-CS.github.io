@@ -30,10 +30,7 @@ const styles = `
 const html = `
 <h1>Work Experience</h1>
 
-<div class='job'>
-    <div class='job-title'>Software Engineer</div>
-    <div class='job-company'>Planview</div>
-    <div class='job-period'>2021 - Present</div>
+<experience-card title='Software Engineer' organization='Planview' period='2021 - Present'>
     <p>Contributing to Hub, a cross-system synchronization web application serving a team of ~10 engineers.</p>
     <ul>
         <li>Frontend modernization: AngularJS/JavaScript to React/TypeScript</li>
@@ -41,29 +38,23 @@ const html = `
         <li>End-to-end feature delivery and design</li>
         <li>DevOps support and release process management</li>
     </ul>
-</div>
+</experience-card>
 
-<div class='job'>
-    <div class='job-title'>Developer</div>
-    <div class='job-company'>UBC Learning Technology Hub</div>
-    <div class='job-period'>2020 - 2021</div>
+<experience-card title='Developer' organization='UBC Learning Technology Hub' period='2020 - 2021'>
     <p>Contributed to Equity Insights, a visualization tool for grade and demographic equity data.</p>
     <ul>
         <li>Built interactive graph displays using D3.js</li>
         <li>Worked on data processing and visualization pipeline</li>
     </ul>
-</div>
+</experience-card>
 
-<div class='job'>
-    <div class='job-title'>IT Support Analyst</div>
-    <div class='job-company'>UBC Learning Technology Hub</div>
-    <div class='job-period'>2019 - 2020</div>
+<experience-card title='IT Support Analyst' organization='UBC Learning Technology Hub' period='2019 - 2020'>
     <p>Provided technical support and training for learning technology tools used across UBC.</p>
     <ul>
         <li>Troubleshooting and resolving faculty and student issues</li>
         <li>Training on digital tools and best practices</li>
     </ul>
-</div>
+</experience-card>
 `;
 
 const template = document.createElement('template');

@@ -30,32 +30,14 @@ const styles = `
 
 const html = `
 <h1>Community Involvement</h1>
-<p>I'm passionate about using my technical skills to support creative communities and spaces.</p>
 
-<h2>Volunteering</h2>
-
-<div class='event'>
-    <div class='event-title'>AV Technician</div>
-    <div class='event-role'>Retro Gaming Expo</div>
-    <div class='event-year'>2022, 2023</div>
+<experience-card title='AV Technician' organization='Retro Gaming Expo' period='2022, 2023'>
     <p>Provided audio/visual technical support for vendor setup, booth management, and event presentation.</p>
-</div>
+</experience-card>
 
-<div class='event'>
-    <div class='event-title'>Playtester</div>
-    <div class='event-role'>ProtoCON</div>
-    <div class='event-year'>2022, 2023</div>
+<experience-card title='Playtester' organization='ProtoCON' period='2022, 2023'>
     <p>Tested indie games during development and provided constructive feedback to creators. Helped identify bugs and gameplay improvements.</p>
-</div>
-
-<div class='event'>
-    <div class='event-title'>Tech Support Volunteer</div>
-    <div class='event-role'>Various Community Events</div>
-    <p>Provided technical assistance at local gaming and maker events, troubleshooting hardware and software issues.</p>
-</div>
-
-<h2>Interests</h2>
-<p>I'm deeply interested in retro computing, gaming history, and the culture surrounding video game preservation. As you can see from this site's design, I'm a big Fallout fan and enjoy the retro-terminal aesthetic.</p>
+</experience-card>
 `;
 
 const template = document.createElement('template');

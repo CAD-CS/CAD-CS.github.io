@@ -1,4 +1,5 @@
 import './components/ascii-art.js';
+import './components/experience-card.js';
 import './components/side-bar.js';
 import './pages/home-page.js';
 import './pages/work-experience-page.js';
