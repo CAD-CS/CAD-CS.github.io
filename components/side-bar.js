@@ -1,5 +1,7 @@
 import { routes } from '../routes.js';
 
+const selectorIcon = "&gt;"; // ">"
+
 const template = document.createElement('template');
 template.innerHTML = `
 <style>
@@ -67,19 +69,7 @@ class SideBar extends HTMLElement {
 
         routes.forEach(route => this.initializeNavigationItem(route, ul));
 
-        this.root.addEventListener("click", (e) => {
-            const link = e.target.closest("[data-link]");
-            if (!link) return;
-
-            const path = link.getAttribute("data-link");
-            this.updateActiveState(path);
-
-            this.dispatchEvent(new CustomEvent("route-change-request", {
-                detail: { path },
-                bubbles: true,
-                composed: true,
-            }));
-        });
+        this.root.addEventListener("click", (e) => this.updateSelection(e));
 
         document.addEventListener("route-change", (e) => {
             this.updateActiveState(e.detail.path);
@@ -104,11 +94,25 @@ class SideBar extends HTMLElement {
             .replace(/^\w/, c => c.toUpperCase());
     }
 
+    updateSelection(e) {
+        const link = e.target.closest("[data-link]");
+        if (!link) return;
+
+        const path = link.getAttribute("data-link");
+        this.updateActiveState(path);
+
+        this.dispatchEvent(new CustomEvent("route-change-request", {
+            detail: { path },
+            bubbles: true,
+            composed: true,
+        }));
+    }
+
     updateActiveState(path) {
         this.currentPath = path;
 
         this.root.querySelectorAll(".nav-indicator").forEach(span => {
-            span.innerHTML = '';
+            span.innerHTML = "";
         });
 
         this.root.querySelectorAll("[data-link]").forEach(btn => {
@@ -119,7 +123,7 @@ class SideBar extends HTMLElement {
         if (activeButton) {
             const indicator = activeButton.previousElementSibling;
             if (indicator && indicator.classList.contains("nav-indicator")) {
-                indicator.innerHTML = "&gt;";
+                indicator.innerHTML = selectorIcon;
             }
             activeButton.setAttribute("aria-current", "page");
         }

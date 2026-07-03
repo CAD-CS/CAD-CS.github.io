@@ -4,6 +4,7 @@ const routeMap = Object.fromEntries(
     routes.map(r => [r.path, r.tag])
 );
 
+// Note: Hash refers to the part of the URL after the "#" symbol.
 function getCurrentPath() {
     const hash = window.location.hash.slice(1);
     return hash || "home";
