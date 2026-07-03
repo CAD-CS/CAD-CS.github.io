@@ -4,48 +4,30 @@ const selectorIcon = '&gt;'; // '>'
 
 const styles = `
 <style>
+    ul {
+        list-style-type: none;
+        padding-left: 10px;
+    }
+
     button {
+        display: block;
+        width: 100%;
         color: var(--text-colour);
         background: none;
         border: none;
         font-family: inherit;
         font-weight: bold;
         font-size: medium;
-    }
-
-    ul {
-        list-style-type: none;
-        padding-left: 10px;
-    }
-
-    li {
-        position: relative;
-    }
-
-    li:hover {
-        border-color: var(--hover-colour);
-        color: var(--hover-colour);
-        border-style: solid;
-        border-width: thin;
-    }
-
-    li:hover * {
-        color: var(--hover-colour);
+        text-align: left;
+        padding: 0.25rem 0;
         cursor: pointer;
     }
 
-    button:focus-visible {
-        outline: 2px solid var(--hover-colour);
-        outline-offset: 2px;
-    }
-
-    li[data-active] {
-        border-left: 2px solid var(--hover-colour);
-        padding-left: 8px;
+    button:hover {
+        color: var(--hover-colour);
     }
 
     .nav-indicator {
-        min-width: 1ch;
         display: inline-block;
         font-weight: bold;
     }
@@ -90,8 +72,10 @@ class SideBar extends HTMLElement {
         const li = document.createElement('li');
         const formattedPath = this.formatPath(route.path);
         li.innerHTML = `
-                <span class='nav-indicator' aria-hidden='true'></span>
-                <button data-link='${route.path}' aria-current='false'>${formattedPath}</button>
+                <button data-link='${route.path}' aria-current='false'>
+                    <span class='nav-indicator' aria-hidden='true'></span>
+                    ${formattedPath}
+                </button>
             `;
         ul.appendChild(li);
     }
@@ -131,7 +115,7 @@ class SideBar extends HTMLElement {
 
         const activeButton = this.root.querySelector(`[data-link='${path}']`);
         if (activeButton) {
-            const indicator = activeButton.previousElementSibling;
+            const indicator = activeButton.querySelector('.nav-indicator');
             if (indicator && indicator.classList.contains('nav-indicator')) {
                 indicator.innerHTML = selectorIcon;
             }
