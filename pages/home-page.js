@@ -1,14 +1,12 @@
 const txt = `
 
-I have extensive experience working in collaborative engineering environments, including contributing to a team of about ten engineers at Planview on Hub, a cross‑system synchronization web app. My work covered the whole stack, from frontend modernization (AngularJS/JavaScript --> React/TypeScript) to backend services (Java), and end-to-end feature delivery and design. I also supported our team's DevOps needs and release processes.
+I’m a software engineer with experience across the full stack, creating web interfaces and services while also maintaining and triaging DevOps pipelines.
 
-At UBC's Learning Technology Hub, I contributed to Equity Insights, a grade and demographics in-equity visualizer, by building interactive graph displays using D3.
+Alongside development, I have experience working directly with clients in operational roles, providing technical consultation, live troubleshooting, and clear documentation.
 
-On the operations side, I worked as an IT Support Analyst at the LT Hub, helping faculty and students troubleshoot learning‑technology issues and providing training on the digital tools used at UBC.
+Outside of work, I enjoy making games and volunteering at conventions, expos, and festivals. Community involvement matters a lot to me, especially in creative and artistic spaces and I try to support them as much as I can.
 
-Community involvement is important to me, and I enjoy using my technical skills to support creative spaces. I have volunteered at events such as the Retro Gaming Expo as an AV Technician and at ProtoCON as a playtester.
-
-As can be seen by the design of this site, I am also a big Fallout and retro-computing fan!
+I’m also a fan of retro computing and the Fallout series, which I hope comes through in the design of this site!
 `;
 
 const styles = `

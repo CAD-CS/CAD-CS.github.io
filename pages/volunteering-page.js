@@ -37,7 +37,7 @@ const html = `
     </ul>
 </experience-card>
 
-<experience-card title='Play Tester' organization='ProtoCON' period='Nov 2025'>
+<experience-card title='Play Tester' organization='ProtoCON (Board Game Convention)' period='Nov 2025'>
     <ul>
         <li>Provided actionable feedback on flow, accessibility, and difficulty, enabling board game designers to improve their games prior to public release.</li>
     </ul>
@@ -50,20 +50,20 @@ regarding how it is like to live on campus, creating a safe and welcoming enviro
     </ul>
 </experience-card>
 
-<experience-card title='Security Volunteer' organization='UBC Pop-Up Hanami' period='March 2025'>
+<experience-card title='Security Volunteer' organization='UBC Pop-Up Hanami (Anime and Japanese cultural festival)' period='March 2025'>
     <ul>
         <li>Maintained a safe environment for convention attendees by monitoring for and reporting inappropriate behavior.</li>
     </ul>
 </experience-card>
 
-<experience-card title='General Volunteer' organization='Powell Street Festival' period='Aug 2023'>
+<experience-card title='General Volunteer' organization='Powell Street Festival (Japanese cultural festival)' period='Aug 2023'>
     <ul>
         <li>Provided general volunteer support, including delivering food to performers and guiding
 attendees with wayfinding assistance.</li>
     </ul>
 </experience-card>
 
-<experience-card title='Logistics Volunteer' organization='Multidisciplinary Undergraduate Research Conference (MURC)' period='March 2023'>
+<experience-card title='Logistics Volunteer' organization='UBC Multidisciplinary Undergraduate Research Conference (MURC)' period='March 2023'>
     <ul>
         <li>Assisted conference attendees with wayfinding and tracked presenter attendance to ensure
 adjudication requirements were met.</li>
