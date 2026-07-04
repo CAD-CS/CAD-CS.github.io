@@ -23,7 +23,7 @@ const styles = `
     }
 
     pre:hover {
-        color: var(--hover-colour, #ffbf00);
+        color: var(--hover-colour);
         cursor: default;
     }
 </style>
