@@ -3,27 +3,6 @@ const styles = `
     h1:hover, h2:hover, h3:hover {
         color: var(--hover-colour);
     }
-
-    .job {
-        margin-bottom: 2rem;
-    }
-
-    .job-title {
-        font-weight: bold;
-    }
-
-    .job-company {
-        color: #00bfff;
-    }
-
-    .job-period {
-        color: #ffbf00;
-        font-size: 0.9em;
-    }
-
-    ul {
-        margin-left: 1.5rem;
-    }
 </style>
 `;
 

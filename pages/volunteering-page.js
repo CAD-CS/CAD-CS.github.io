@@ -3,28 +3,6 @@ const styles = `
     h1:hover, h2:hover, h3:hover {
         color: var(--hover-colour);
     }
-
-    .event {
-        margin-bottom: 2rem;
-    }
-
-    .event-title {
-        font-weight: bold;
-        font-size: 1.1em;
-    }
-
-    .event-role {
-        color: #00bfff;
-    }
-
-    .event-year {
-        color: #ffbf00;
-        font-size: 0.9em;
-    }
-
-    p {
-        margin-top: 0.5rem;
-    }
 </style>
 `;
 

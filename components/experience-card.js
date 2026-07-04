@@ -1,7 +1,7 @@
 const styles = `
 <style>
-    h1:hover, h2:hover, h3:hover {
-        color: var(--hover-colour);
+    ul {
+        margin-left: 1.5rem;
     }
 
     .position {
@@ -13,16 +13,16 @@ const styles = `
     }
 
     .position-organization {
-        color: #00bfff;
+        color: var(--accent-colour);
     }
 
     .position-period {
-        color: #ffbf00;
+        color: var(--hover-colour);
         font-size: 0.9em;
     }
 
-    ul {
-        margin-left: 1.5rem;
+    .position-title:hover, slot:hover {
+        color: var(--hover-colour);
     }
 </style>
 `;

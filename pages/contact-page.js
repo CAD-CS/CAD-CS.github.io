@@ -1,27 +1,7 @@
 const styles = `
 <style>
     :host {
-        --link-colour: #00bfff;
         --link-hover-colour: #ff2d2d;
-    }
-
-    h1:hover, h2:hover, span:hover {
-        color: var(--hover-colour);
-    }
-
-    a, a:visited {
-        color: var(--link-colour);
-        text-decoration: none;
-    }
-
-    a:hover {
-        color: var(--link-hover-colour);
-        text-decoration: underline;
-    }
-
-    a:focus-visible {
-        outline: 2px solid var(--hover-colour);
-        outline-offset: 2px;
     }
 
     ul {
@@ -32,12 +12,25 @@ const styles = `
     li {
         margin-bottom: 0.5rem;
     }
+
+    h1:hover, h2:hover, span:hover {
+        color: var(--hover-colour);
+    }
+
+    a, a:visited {
+        color: var(--accent-colour);
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: var(--link-hover-colour);
+        text-decoration: underline;
+    }
 </style>
 `;
 
 const html = `
-<h1>Have I piqued your interest?</h1>
-<h2>Contact me!</h2>
+<h1>Have I piqued your interest? Contact me!</h1>
 <ul>
     <li><span>Email:</span>
         <a href='mailto:hash-par@hotmail.com'>hash-par@hotmail.com</a>

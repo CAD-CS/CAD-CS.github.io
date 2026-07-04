@@ -17,6 +17,8 @@ const styles = `
         word-break: break-word;
         overflow-wrap: anywhere;
         line-height: 1.5;
+        font-family: inherit;
+        font-size: large;
     }
 
     h1:hover, h2:hover, p:hover, pre:hover {

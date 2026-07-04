@@ -18,18 +18,12 @@ const art = `
 
 const styles = `
 <style>
-    :host {
-        --ascii-art-colour: var(--text-colour, #39FF14);
-        --ascii-art-hover-colour: var(--hover-colour, #ffbf00);
-    }
-
     pre {
-        color: var(--ascii-art-colour);
-        transition: color 0.2s ease;
+        transition: color 0.5s ease;
     }
 
     pre:hover {
-        color: var(--ascii-art-hover-colour);
+        color: var(--hover-colour, #ffbf00);
         cursor: default;
     }
 </style>
