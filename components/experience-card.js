@@ -10,6 +10,7 @@ const styles = `
 
     .position-title {
         font-weight: bold;
+        color: var(--ascii-colour);
     }
 
     .position-organization {
@@ -17,12 +18,21 @@ const styles = `
     }
 
     .position-period {
-        color: var(--hover-colour);
+        color: var(--text-colour);
         font-size: 0.9em;
     }
 
-    .position-title:hover, slot:hover {
-        color: var(--hover-colour);
+    .position-period:hover {
+        color: var(--text-hover-colour);
+        font-size: 0.9em;
+    }
+
+    .position-title:hover {
+        color: var(--bold-hover-colour);
+    }
+
+    .position-organization:hover {
+        color: var(--accent-hover-colour);
     }
 </style>
 `;

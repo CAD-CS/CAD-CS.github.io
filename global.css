@@ -1,8 +1,16 @@
 :root {
-    --text-colour: #39FF14;
-    --hover-colour: #ffbf00;
-    --border-colour: #1e7c0d;
-    --accent-colour: #00bfff;
+    --text-colour: #d9c99a;
+    --text-hover-colour: #f5eeda;
+    --ascii-colour: #33cc33;
+    --ascii-hover-colour: #c87820;
+    --nav-colour: #cc2200;
+    --nav-hover-colour: #ff2d2d;
+    --accent-colour: #4189ab;
+    --accent-hover-colour: #5ed7ff;
+    --bold-colour: #e8c84a;
+    --bold-hover-colour: #ffe680;
+    --border-colour: #3a2a10;
+    --border-hover-colour: #7a4a20;
 }
 
 html,
@@ -13,7 +21,7 @@ body {
 }
 
 body {
-    background-color: black;
+    background-color: #0c0a06;
     color: var(--text-colour);
     font-family: 'Courier New', Courier, monospace;
 }
@@ -35,7 +43,7 @@ body {
 
 #side-bar-container:hover,
 #side-bar-container:focus-within {
-    border-color: var(--hover-colour);
+    border-color: var(--border-hover-colour);
 }
 
 #app-content {
@@ -46,7 +54,7 @@ body {
 }
 
 #app-content:hover {
-    border-color: var(--hover-colour);
+    border-color: var(--border-hover-colour);
 }
 
 @media (max-width: 768px) {

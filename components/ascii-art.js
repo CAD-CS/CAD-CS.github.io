@@ -19,11 +19,12 @@ const art = `
 const styles = `
 <style>
     pre {
-        transition: color 0.5s ease;
+        color: var(--ascii-colour);
+        transition: color 1s ease;
     }
 
     pre:hover {
-        color: var(--hover-colour);
+        color: var(--ascii-hover-colour);
         cursor: default;
     }
 </style>

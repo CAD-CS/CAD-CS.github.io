@@ -1,9 +1,5 @@
 const styles = `
 <style>
-    :host {
-        --link-hover-colour: #ff2d2d;
-    }
-
     ul {
         list-style-type: none;
         padding-left: 0;
@@ -14,7 +10,7 @@ const styles = `
     }
 
     h1:hover, h2:hover, span:hover {
-        color: var(--hover-colour);
+        color: var(--text-hover-colour);
     }
 
     a, a:visited {
@@ -23,7 +19,7 @@ const styles = `
     }
 
     a:hover {
-        color: var(--link-hover-colour);
+        color: var(--accent-hover-colour);
         text-decoration: underline;
     }
 </style>

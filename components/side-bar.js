@@ -24,12 +24,13 @@ const styles = `
     }
 
     button:hover {
-        color: var(--hover-colour);
+        color: var(--nav-hover-colour);
     }
 
     .nav-indicator {
         display: inline-block;
         font-weight: bold;
+        color: var(--nav-colour);
     }
 </style>
 `;

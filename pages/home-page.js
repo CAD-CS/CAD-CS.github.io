@@ -1,12 +1,10 @@
 const txt = `
 
-I’m a software engineer with experience across the full stack, creating web interfaces and services while also maintaining and triaging DevOps pipelines.
+I'm a software engineer with experience across the full stack, creating web interfaces and services while also maintaining and triaging DevOps pipelines.
 
 Alongside development, I have experience working directly with clients in operational roles, providing technical consultation, live troubleshooting, and clear documentation.
 
 Outside of work, I enjoy making games and volunteering at conventions, expos, and festivals. Community involvement matters a lot to me, especially in creative and artistic spaces and I try to support them as much as I can.
-
-I’m also a fan of retro computing and the Fallout series, which I hope comes through in the design of this site!
 `;
 
 const styles = `
@@ -20,12 +18,17 @@ const styles = `
         line-height: 1.5;
     }
 
-    h1:hover, h2:hover, p:hover, pre:hover {
-        color: var(--hover-colour);
+    h2:hover, pre:hover {
+        color: var(--text-hover-colour);
     }
 
     h1 {
         font-style: italic;
+        color: var(--nav-colour);
+    }
+
+    h1:hover {
+        color: var(--nav-hover-colour);
     }
 </style>
 `;

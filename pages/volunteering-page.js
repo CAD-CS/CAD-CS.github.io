@@ -1,7 +1,7 @@
 const styles = `
 <style>
-    h1:hover, h2:hover, h3:hover {
-        color: var(--hover-colour);
+    h1:hover, h2:hover, h3:hover, ul:hover {
+        color: var(--text-hover-colour);
     }
 </style>
 `;
