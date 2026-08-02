@@ -1,6 +1,6 @@
 const txt = `
 
-I'm a software engineer with experience across the full stack, creating web interfaces and services while also maintaining and triaging DevOps pipelines.
+I'm a software developer with experience across the full stack, creating web interfaces and services while also maintaining and triaging DevOps pipelines.
 
 Alongside development, I have experience working directly with clients in operational roles, providing technical consultation, live troubleshooting, and clear documentation.
 
@@ -36,7 +36,7 @@ const styles = `
 const html = `
 <div class='container'>
     <ascii-art></ascii-art>
-    <h1>SOFTWARE ENGINEER | GAME DEVELOPER | IT SUPPORT ANALYST</h1>
+    <h1>SOFTWARE SOFTWARE DEVELOPER | GAME DEVELOPER | IT SUPPORT ANALYST</h1>
     <h2>A quick spiel (some would call this an elevator pitch)</h2>
     <pre>${txt}</pre>
 </div>
