@@ -36,7 +36,7 @@ const styles = `
 const html = `
 <div class='container'>
     <ascii-art></ascii-art>
-    <h1>SOFTWARE SOFTWARE DEVELOPER | GAME DEVELOPER | IT SUPPORT ANALYST</h1>
+    <h1>SOFTWARE DEVELOPER | GAME DEVELOPER | IT SUPPORT ANALYST</h1>
     <h2>A quick spiel (some would call this an elevator pitch)</h2>
     <pre>${txt}</pre>
 </div>
