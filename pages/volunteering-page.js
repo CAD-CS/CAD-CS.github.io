@@ -9,6 +9,12 @@ const styles = `
 const html = `
 <h1>Community Involvement</h1>
 
+<experience-card title='General Volunteer' organization='Full Indie' period='Aug 2026 - Present'>
+    <ul>
+        <li>Assisted event operations by checking in attendees and answering their questions.</li>
+    </ul>
+</experience-card>
+
 <experience-card title='Audio Visual Technician' organization='Vancouver Retro Gaming Expo' period='June 2026'>
     <ul>
         <li>Managed full audio‑visual operations for event panels, including setup, live troubleshooting, and teardown, ensuring uninterrupted presentations and a professional environment.</li>
