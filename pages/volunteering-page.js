@@ -15,6 +15,12 @@ const html = `
     </ul>
 </experience-card>
 
+<experience-card title='Setup Volunteer' organization='Westcoast Comic Con' period='Aug 2026'>
+    <ul>
+        <li>Helped set up and prepare the venue for the event, ensuring tables and chairs were in the correct locations and presentable for exhibitors.</li>
+    </ul>
+</experience-card>
+
 <experience-card title='Audio Visual Technician' organization='Vancouver Retro Gaming Expo' period='June 2026'>
     <ul>
         <li>Managed full audio‑visual operations for event panels, including setup, live troubleshooting, and teardown, ensuring uninterrupted presentations and a professional environment.</li>
