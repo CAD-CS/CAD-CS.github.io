@@ -15,6 +15,18 @@ const html = `
     </ul>
 </experience-card>
 
+<experience-card title='Set up & Strike Volunteer' organization='Vancouver International Film Festival' period='Sep - Oct 2026'>
+    <ul>
+        <li>Assembled lighting and furniture setups for festival venues, helping ensure spaces were fully prepped and event-ready ahead of screenings.</li>
+    </ul>
+</experience-card>
+
+<experience-card title='Event Support Volunteer' organization='Full Indie Summit' period='Sep 2026'>
+    <ul>
+        <li>Managed late registrant check-in, provided live mic support for panelists, and delivered wayfinding assistance to attendees, ensuring a smooth and well-organized event experience. </li>
+    </ul>
+</experience-card>
+
 <experience-card title='Setup Volunteer' organization='Westcoast Comic Con' period='Aug 2026'>
     <ul>
         <li>Helped set up and prepare the venue for the event, ensuring tables and chairs were in the correct locations and presentable for exhibitors.</li>
